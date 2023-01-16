@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT 
 
 const dadJokes = [
     { id: 1, question: "Why don't scientists trust atoms?", punchline: "Because they make up everything.", averageScore: 0, votes: 0},
@@ -52,7 +52,7 @@ function nextJoke(res){
     res.render("index", { id: joke.id, question: joke.question, punchline: joke.punchline, averageScore: joke.averageScore, votes: joke.votes, css: css });
 }
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log("listening to port" + PORT)
     console.log(dadJokes)
 });
