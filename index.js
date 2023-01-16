@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser");
 const express = require("express");
 const fs = require('fs');
+require('dotenv').config()
 
 const app = express();
 app.set("view engine", "ejs");
@@ -26,6 +27,8 @@ function generateDadJoke() {
 }
 
 app.get("/", (req, res) => {
+    const appKey = process.env.APP_KEY
+    console.log(appKey)
     nextJoke(res)
 });
 
