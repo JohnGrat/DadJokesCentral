@@ -91,7 +91,6 @@ function generateDadJoke() {
 }
 
 app.get("/", (req, res) => {
-  const appKey = process.env.APP_KEY;
   nextJoke(res);
 });
 
@@ -120,12 +119,13 @@ app.delete("/jokes/:id", (req, res) => {
 });
 
 app.post("/jokes", (req, res) => {
+  let maxId = dadJokes.reduce((max, joke) => Math.max(max, joke.id), 0);
   const newJoke = {
-    id: dadJokes.length + 1,
-    question: req.body.question,
-    punchline: req.body.punchline,
-    averageScore: 0,
-    votes: 0,
+      id: maxId + 1,
+      question: req.body.question,
+      punchline: req.body.punchline,
+      averageScore: 0,
+      votes: 0,
   };
   dadJokes.push(newJoke);
   res.json({ message: "Joke added successfully", newJoke });
