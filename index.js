@@ -92,7 +92,6 @@ function generateDadJoke() {
 
 app.get("/", (req, res) => {
   const appKey = process.env.APP_KEY;
-  console.log(appKey);
   nextJoke(res);
 });
 
@@ -105,8 +104,31 @@ app.post("/score", (req, res) => {
 
   joke.votes += 1;
   joke.averageScore = totalScore / joke.votes;
-  console.log(joke);
+
   nextJoke(res);
+});
+
+app.get("/jokes", (req, res) => {
+  res.json(dadJokes);
+});
+
+app.delete("/jokes/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const jokeIndex = dadJokes.findIndex((x) => x.id == id);
+  dadJokes.splice(jokeIndex, 1);
+  res.json({ message: "Joke deleted successfully" });
+});
+
+app.post("/jokes", (req, res) => {
+  const newJoke = {
+    id: dadJokes.length + 1,
+    question: req.body.question,
+    punchline: req.body.punchline,
+    averageScore: 0,
+    votes: 0,
+  };
+  dadJokes.push(newJoke);
+  res.json({ message: "Joke added successfully", newJoke });
 });
 
 function nextJoke(res) {
@@ -124,5 +146,4 @@ function nextJoke(res) {
 
 app.listen(PORT, () => {
   console.log("listening to port" + PORT);
-  console.log(dadJokes);
 });
