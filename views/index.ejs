@@ -10,33 +10,38 @@
 
 <body>
     <h1>API Endpoints</h1>
-    <ul>
-        <li>
-            <div class="request-type get">GET</div>
-            <div class="endpoint">/</div>
-            <div class="description">Returns a random dad joke</div>
-        </li>
-        <li>
-            <div class="request-type post">POST</div>
-            <div class="endpoint">/score</div>
-            <div class="description">Submits a score for a dad joke</div>
-        </li>
-        <li>
-            <div class="request-type get">GET</div>
-            <div class="endpoint">/jokes</div>
-            <div class="description">Returns all dad jokes</div>
-        </li>
-        <li>
-            <div class="request-type delete">DELETE</div>
-            <div class="endpoint">/jokes/:id</div>
-            <div class="description">Deletes a specific dad joke</div>
-        </li>
-        <li>
-            <div class="request-type post">POST</div>
-            <div class="endpoint">/jokes</div>
-            <div class="description">Adds a new dad joke</div>
-        </li>
-    </ul>
+    <table>
+        <tr>
+            <th>Request Type</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td class="get">GET</td>
+            <td>/</td>
+            <td>Returns a random dad joke</td>
+        </tr>
+        <tr>
+            <td class="post">POST</td>
+            <td>/score</td>
+            <td>Submits a score for a dad joke</td>
+        </tr>
+        <tr>
+            <td class="get">GET</td>
+            <td>/jokes</td>
+            <td>Returns all dad jokes</td>
+        </tr>
+        <tr>
+            <td class="delete">DELETE</td>
+            <td>/jokes/:id</td>
+            <td>Deletes a specific dad joke</td>
+        </tr>
+        <tr>
+            <td class="post">POST</td>
+            <td>/jokes</td>
+            <td>Adds a new dad joke</td>
+        </tr>
+    </table>
     <h1>
         <%= question %>
     </h1>

@@ -44,31 +44,19 @@ input[type="submit"]:hover {
 }
 
 
-
-ul {
-    list-style: none;
+table, h1 {
+    margin: 0 auto; 
+    text-align:center; 
 }
 
-li {
-    display: flex;
+td.get { 
+    color: blue; 
 }
 
-.request-type,
-.endpoint,
-.description {
-    display: inline-block;
-    width: 150px;
-    margin-right: 10px;
+td.post { 
+    color: green; 
 }
 
-.request-type {
-    color: blue;
-}
-
-.request-type.delete {
-    color: red;
-}
-
-.request-type.post {
-    color: green;
+td.delete { 
+    color: red; 
 }
