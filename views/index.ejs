@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Dad Joke Generator</title>
-        <style>
-            <%= css %>
-        </style>
-    </head>
-    <body>
-        <h1>API Endpoints</h1>
-        <ul>
-            <li><strong>GET /</strong> - Returns a random dad joke</li>
-            <li><strong>POST /score</strong> - Submits a score for a dad joke</li>
-            <li><strong>GET /jokes</strong> - Returns all dad jokes</li>
-            <li><strong>DELETE /jokes/:id</strong> - Deletes a specific dad joke</li>
-            <li><strong>POST /jokes</strong> - Adds a new dad joke</li>
-        </ul>
-        <h1><%= question %></h1>
-        <button id="punchline-button" onclick="revealPunchline()">Tell me</button>
-        <h1 id="punchline" style="display:none;"><%= punchline %></h1>
-        <h2>Average Score: <%= averageScore %></h2>
-        <h2>Votes: <%= votes %></h2>
-        <form action="/score" method="post" id="rating-form" style="display:none;">
-            <label for="score">Score:</label>
-            <input type="hidden" id="id" name="id" value="<%= id %>" />
-            <select id="score" name="score">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5" selected>5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <input type="submit" value="Rate">
-        </form>
-    </body>
-    <script>
-        function revealPunchline() {
-            document.getElementById("punchline").style.display = "block";
-            document.getElementById("punchline-button").style.display = "none";
-            document.getElementById("rating-form").style.display = "block";
-        }
-    </script>
+
+<head>
+    <title>Dad Joke Generator</title>
+    <style>
+        <%=css %>
+    </style>
+</head>
+
+<body>
+    <h1>API Endpoints</h1>
+    <ul>
+        <li><strong class="get">GET /</strong> - Returns a random dad joke</li>
+        <li><strong class="post">POST /score</strong> - Submits a score for a dad joke</li>
+        <li><strong class="get">GET /jokes</strong> - Returns all dad jokes</li>
+        <li><strong class="delete">DELETE /jokes/:id</strong> - Deletes a specific dad joke</li>
+        <li><strong class="post">POST /jokes</strong> - Adds a new dad joke</li>
+    </ul>
+    <h1>
+        <%= question %>
+    </h1>
+    <button id="punchline-button" onclick="revealPunchline()">Tell me</button>
+    <h1 id="punchline" style="display:none;">
+        <%= punchline %>
+    </h1>
+    <h2>Average Score: <%= averageScore %>
+    </h2>
+    <h2>Votes: <%= votes %>
+    </h2>
+    <form action="/score" method="post" id="rating-form" style="display:none;">
+        <label for="score">Score:</label>
+        <input type="hidden" id="id" name="id" value="<%= id %>" />
+        <select id="score" name="score">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <input type="submit" value="Rate">
+    </form>
+</body>
+<script>
+    function revealPunchline() {
+        document.getElementById("punchline").style.display = "block";
+        document.getElementById("punchline-button").style.display = "none";
+        document.getElementById("rating-form").style.display = "block";
+    }
+</script>
+
 </html>

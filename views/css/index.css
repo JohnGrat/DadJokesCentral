@@ -42,3 +42,32 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #3e8e41;
 }
+
+
+.get {
+    color: blue;
+  }
+  
+  .post {
+    color: green;
+  }
+  
+  .delete {
+    color: red;
+  }
+  
+  li strong {
+    font-weight: bold;
+  }
+  
+  li strong.get {
+    color: blue;
+  }
+  
+  li strong.post {
+    color: green;
+  }
+  
+  li strong.delete {
+    color: red;
+  }
