@@ -11,11 +11,31 @@
 <body>
     <h1>API Endpoints</h1>
     <ul>
-        <li><strong class="get">GET /</strong> - Returns a random dad joke</li>
-        <li><strong class="post">POST /score</strong> - Submits a score for a dad joke</li>
-        <li><strong class="get">GET /jokes</strong> - Returns all dad jokes</li>
-        <li><strong class="delete">DELETE /jokes/:id</strong> - Deletes a specific dad joke</li>
-        <li><strong class="post">POST /jokes</strong> - Adds a new dad joke</li>
+        <li>
+            <div class="request-type get">GET</div>
+            <div class="endpoint">/</div>
+            <div class="description">Returns a random dad joke</div>
+        </li>
+        <li>
+            <div class="request-type post">POST</div>
+            <div class="endpoint">/score</div>
+            <div class="description">Submits a score for a dad joke</div>
+        </li>
+        <li>
+            <div class="request-type get">GET</div>
+            <div class="endpoint">/jokes</div>
+            <div class="description">Returns all dad jokes</div>
+        </li>
+        <li>
+            <div class="request-type delete">DELETE</div>
+            <div class="endpoint">/jokes/:id</div>
+            <div class="description">Deletes a specific dad joke</div>
+        </li>
+        <li>
+            <div class="request-type post">POST</div>
+            <div class="endpoint">/jokes</div>
+            <div class="description">Adds a new dad joke</div>
+        </li>
     </ul>
     <h1>
         <%= question %>

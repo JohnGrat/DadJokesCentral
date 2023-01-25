@@ -44,41 +44,31 @@ input[type="submit"]:hover {
 }
 
 
-.get {
-    color: blue;
-  }
-  
-  .post {
-    color: green;
-  }
-  
-  .delete {
-    color: red;
-  }
-  
-  li strong {
-    font-weight: bold;
-  }
-  
-  li strong.get {
-    color: blue;
-  }
-  
-  li strong.post {
-    color: green;
-  }
-  
-  li strong.delete {
-    color: red;
-  }
 
-  ul {
+ul {
     list-style: none;
-  }
-  
-  li strong {
+}
+
+li {
+    display: flex;
+}
+
+.request-type,
+.endpoint,
+.description {
     display: inline-block;
     width: 150px;
-    text-align: right;
     margin-right: 10px;
-  }
+}
+
+.request-type {
+    color: blue;
+}
+
+.request-type.delete {
+    color: red;
+}
+
+.request-type.post {
+    color: green;
+}
