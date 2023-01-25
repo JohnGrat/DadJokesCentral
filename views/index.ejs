@@ -15,31 +15,25 @@
             <th>Request Type</th>
             <th>Endpoint</th>
             <th>Description</th>
-        </tr>
-        <tr>
-            <td class="get">GET</td>
-            <td>/</td>
-            <td>Returns a random dad joke</td>
-        </tr>
-        <tr>
-            <td class="post">POST</td>
-            <td>/score</td>
-            <td>Submits a score for a dad joke</td>
+            <th>Request Body</th>
         </tr>
         <tr>
             <td class="get">GET</td>
             <td>/jokes</td>
             <td>Returns all dad jokes</td>
+            <td></td>
         </tr>
         <tr>
             <td class="delete">DELETE</td>
             <td>/jokes/:id</td>
             <td>Deletes a specific dad joke</td>
+            <td></td>
         </tr>
         <tr>
             <td class="post">POST</td>
             <td>/jokes</td>
             <td>Adds a new dad joke</td>
+            <td> {"question": "string","punchline": "string"}</td>
         </tr>
     </table>
     <h1>
