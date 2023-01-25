@@ -7,6 +7,14 @@
         </style>
     </head>
     <body>
+        <h1>API Endpoints</h1>
+        <ul>
+            <li><strong>GET /</strong> - Returns a random dad joke</li>
+            <li><strong>POST /score</strong> - Submits a score for a dad joke</li>
+            <li><strong>GET /jokes</strong> - Returns all dad jokes</li>
+            <li><strong>DELETE /jokes/:id</strong> - Deletes a specific dad joke</li>
+            <li><strong>POST /jokes</strong> - Adds a new dad joke</li>
+        </ul>
         <h1><%= question %></h1>
         <button id="punchline-button" onclick="revealPunchline()">Tell me</button>
         <h1 id="punchline" style="display:none;"><%= punchline %></h1>
