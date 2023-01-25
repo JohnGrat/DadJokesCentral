@@ -64,3 +64,7 @@ td.delete {
 td, th { 
     padding: 10px; 
 }
+
+section {
+    margin-bottom: 50px;
+}
