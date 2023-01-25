@@ -71,3 +71,14 @@ input[type="submit"]:hover {
   li strong.delete {
     color: red;
   }
+
+  ul {
+    list-style: none;
+  }
+  
+  li strong {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+  }
